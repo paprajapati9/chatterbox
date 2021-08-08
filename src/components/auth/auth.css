@@ -1,0 +1,26 @@
+.form-signin,
+.form-signup{
+    padding: 120px 40px 120px 40px;
+}
+
+.link{
+    color: rgb(0, 119, 255);
+    text-decoration: none;
+}
+
+.form-signin p,
+.form-signup p{
+    margin-bottom: 10px;
+}
+
+.bg-red{
+    background-color: rgba(248, 3, 52, 0.842);
+    border-color: rgb(177, 8, 8);
+    color: rgb(253, 250, 250);
+}
+
+.bg-green{
+    background-color: rgb(120, 185, 24);
+    border-color: rgba(37, 133, 13, 0.801);
+    color: rgb(236, 251, 230);
+}
