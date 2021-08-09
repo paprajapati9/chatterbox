@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Application from './components/App';
+
+//import UserProvider from './providers/UserProvider';
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+	<Application />
+  	,
+  	document.getElementById('root')
 );

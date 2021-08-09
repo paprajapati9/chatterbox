@@ -3,13 +3,10 @@ import { Link } from "@reach/router";
 
 import "./auth.css";
 
-const SignIn = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const signInWithEmailAndPasswordHandler = 
-            (event,email, password) => {
-                event.preventDefault();
+function SignInForm(props) {
+
+    const signInWithEmailAndPasswordHandler = (event,email, password) => {
+        event.preventDefault();
     };
 
     const onChangeHandler = (event) => {
@@ -22,6 +19,10 @@ const SignIn = () => {
             setPassword(value);
         }
     };
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
 
     return (
         <div className="form-signin">
@@ -63,6 +64,6 @@ const SignIn = () => {
             </form>
         </div>
     );
-};
+}
 
-export default SignIn;
+export default SignInForm;

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "@reach/router";
-const SignUp = () => {
+
+import "./auth.css";
+
+const SignUpForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [displayName, setDisplayName] = useState("");
@@ -79,4 +82,4 @@ const SignUp = () => {
     </div>
   );
 };
-export default SignUp;
+export default SignUpForm;
