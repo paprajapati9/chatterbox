@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { UserContext } from "../providers/UserProvider";
 import {auth} from "../firebase";
 
-const Profile = () => {
+const Dashboard = () => {
   const user = useContext(UserContext);
   const {photoURL, displayName, email} = user;
   return (
@@ -22,8 +22,9 @@ const Profile = () => {
         <h3 className = "italic">{email}</h3>
         </div>
       </div>
-      <button className = "w-full py-3 bg-red-600 mt-4 text-white" onClick = {() => {auth.signOut()}}>Sign out</button>
+      <button className = "w-full py-3 bg-red-600 mt-4 text-white" onClick = {() => {auth.signOut();
+      window.location.assign('/');}}>Sign out</button>
     </div>
   ) 
 };
-export default Profile;
+export default Dashboard;

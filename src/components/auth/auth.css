@@ -3,6 +3,15 @@
     padding: 120px 40px 120px 40px;
 }
 
+.form-container{
+    width: max-content;
+    padding: 30px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 8px #888888;
+}
+
 .link{
     color: rgb(0, 119, 255);
     text-decoration: none;
