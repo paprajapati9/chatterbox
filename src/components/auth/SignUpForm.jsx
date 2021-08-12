@@ -14,15 +14,14 @@ const SignUpForm = () => {
         event.preventDefault();
         try {
             const {user} = await auth.createUserWithEmailAndPassword(email, password);
-            console.log(user, "user");
-            generateUserDocument(user, {displayName});
+            generateUserDocument(user, {displayName:displayName});
         } catch (error) {
             setError('Error Signing up, Please try again after some time');
         }
         setEmail("");
         setPassword("");
         setDisplayName("");
-        window.location.assign('/');
+        window.location.replace('/');
     };
     const onChangeHandler = event => {
         const { name, value } = event.currentTarget;

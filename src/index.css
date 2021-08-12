@@ -62,3 +62,10 @@ form button {
 .text-center{
   text-align: center;
 }
+
+/** DASHBOARD **/
+
+.dashboard{
+  display: grid;
+  grid-template-columns: 300px 1fr 400px;
+}
