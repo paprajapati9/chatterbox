@@ -1,0 +1,24 @@
+.side-panel-option{
+    padding: 6px 20px;
+    font-size: 12px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    grid-gap: 10px;
+    cursor: pointer;
+    height: 32px;
+}
+
+.side-panel-option:hover{
+    background-color: blue;
+}
+ 
+.side-panel-option > .side-panel-option__icon{
+    width: 15px;
+    height: auto;
+}
+
+hr{
+    border: solid 0.5px var(--N700);
+}

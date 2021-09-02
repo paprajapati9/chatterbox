@@ -1,0 +1,21 @@
+.channels-container{
+    height: max-content;
+    margin: 20px 20px 10px 20px;
+    display: grid;
+    grid-gap: 20px;
+    color: rgb(195, 195, 195);
+}
+
+.sub-title{
+    font-size: 14px;
+    display: grid;
+    grid-gap: 10px;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: max-content 1fr 20px;
+    color: rgb(195, 195, 195);
+}
+
+.sub-title .fa-plus{
+    cursor: pointer;
+}

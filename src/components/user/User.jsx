@@ -23,6 +23,7 @@ export default function User(props) {
 	}
 
 	let dropClass = 'user-dropdown user-container ';
+	let userName = props.userName;
  	return (
 		<div 
 			id = {props.hasDropdown && 'dropdown-container'}
@@ -30,11 +31,13 @@ export default function User(props) {
 			onClick = {props.hasDropdown && DropdownAction}
 		>
 			<img src={props.img || 'https://res.cloudinary.com/dqcsk8rsc/image/upload/v1577268053/avatar-1-bitmoji_upgwhc.png'} className="user-avatar"></img>
-            <div className="user-name">{props.userName}</div>
+            <div className="user-name">{userName}</div>
 			{props.hasDropdown && <i className="fa fa-caret-down"></i>}
 			{props.hasDropdown && 
 			<div className="dropdown">
-				<div onClick = { () => {auth.signOut()} }>Sign Out</div>
+				<div className="dropdown-option inactive">Signed in as {userName}</div>
+				<div className="dropdown-option">Change Avatar</div>
+				<div className="dropdown-option" onClick = { () => {auth.signOut()} }>Sign Out</div>
 			</div>
 			}
 		</div>

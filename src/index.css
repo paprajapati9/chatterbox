@@ -1,3 +1,9 @@
+:root{
+  --P500: #312d95;
+  --N700: rgba(105, 105, 105, 0.479);
+  --N500: rgba(255,255,255,0.3);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -67,5 +73,10 @@ form button {
 
 .dashboard{
   display: grid;
-  grid-template-columns: 300px 1fr 400px;
+  height: 100vh;
+  grid-template-rows: 40px;
+}
+.dashboard-main{
+  display: grid;
+  grid-template-columns: 300px 1fr;
 }

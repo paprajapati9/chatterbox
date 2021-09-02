@@ -6,8 +6,12 @@
     height: max-content;
     gap: 15px;
     color: aliceblue;
-    margin: 0 40px;
+    padding: 10px 20px;
     position: relative;
+}
+
+.user-container:hover{
+    background: blue;
 }
 
 .user-container.user-dropdown{
@@ -19,17 +23,31 @@
     color: #000;
     position: absolute;
     top: 55px;
-    width: 100%;
-    padding: 10px;
+    left: 20px;
+    width: max-content;
     display: none;
+}
+
+.dropdown .inactive{
+    color: rgb(212, 209, 209);
 }
 
 .show .dropdown{
     display: grid;
+    border-radius: 3px;
+}
+
+.dropdown-option{
+    padding: 10px 15px;
+}
+
+.dropdown .dropdown-option:not(.inactive):hover{
+    background: rgb(236, 236, 236);
+    border-radius: 3px;
 }
 
 .user-avatar{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
 }
