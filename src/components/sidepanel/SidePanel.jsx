@@ -44,9 +44,9 @@ export default function SidePanel(props) {
 			<hr></hr>
 			<SidepanelOption Icon = {ExpandMore} title = "Channels" />
 			<hr />
-			<SidepanelOption Icon = {Add} title = "Add Channel" />
+			<SidepanelOption Icon = {Add} title = "Add Channel" addChannelOption = {true} />
 			{channels.map((channel) => (
-				<SidepanelOption title = {channel.name} />
+				<SidepanelOption title = {channel.name} id = {channel.id}/>
 			))}
 			<hr />
 			<Channels 

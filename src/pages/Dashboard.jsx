@@ -18,7 +18,7 @@ function Dashboard(){
 						user = {user}
 					/>
 					<Switch>
-						<Route path="/channels/:channelId">
+						<Route path="/channel/:channelId">
 							<Chat />
 						</Route>
 						<Route>
