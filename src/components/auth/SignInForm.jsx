@@ -2,9 +2,21 @@ import React, {useState} from "react";
 import { Link } from "@reach/router";
 
 import "./auth.css";
-import { auth, signInWithGoogle } from "../../firebase";
+import { auth, provider } from "../../firebase";
 
 function SignInForm(props) {
+
+    const signInWithGoogle = (event) => {
+        event.preventDefault()
+        console.log("in here auth");
+        auth.signInWithPopup(provider)
+        .then((result) => {
+            console.log(result);
+        })
+        .catch((error) => {
+            alert(error.message);
+        });
+    }
 
     const signInWithEmailAndPasswordHandler = (event,email, password) => {
         event.preventDefault();
@@ -57,7 +69,7 @@ function SignInForm(props) {
                         onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}}>Login
                     </button>
                     <p className="text-center">or</p>
-                    <button className="bg-red" onClick = {(event) => signInWithGoogle()}  >Sign in with Google</button>
+                    <button className="bg-red" onClick = {(event) => signInWithGoogle(event)}  >Sign in with Google</button>
                     <br />
                     <p className="text-center">Don't have an account?{" "}
                         <Link to="sign-up" className="link">
